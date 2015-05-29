@@ -13,6 +13,7 @@
 		4E13C0BA1B18DE0E002C874D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E13C0B91B18DE0E002C874D /* Images.xcassets */; };
 		4E13C0BD1B18DE0E002C874D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E13C0BB1B18DE0E002C874D /* LaunchScreen.xib */; };
 		4E13C0C91B18DE0E002C874D /* RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13C0C81B18DE0E002C874D /* RSSTests.swift */; };
+		4E13C0D31B18DF8D002C874D /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E13C0D21B18DF8D002C874D /* DetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4E13C0C21B18DE0E002C874D /* RSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E13C0C71B18DE0E002C874D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E13C0C81B18DE0E002C874D /* RSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
+		4E13C0D21B18DF8D002C874D /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				4E13C0B21B18DE0E002C874D /* AppDelegate.swift */,
 				4E13C0B41B18DE0E002C874D /* ViewController.swift */,
+				4E13C0D21B18DF8D002C874D /* DetailedViewController.swift */,
 				4E13C0B61B18DE0E002C874D /* Main.storyboard */,
 				4E13C0B91B18DE0E002C874D /* Images.xcassets */,
 				4E13C0BB1B18DE0E002C874D /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				4E13C0B51B18DE0E002C874D /* ViewController.swift in Sources */,
 				4E13C0B31B18DE0E002C874D /* AppDelegate.swift in Sources */,
+				4E13C0D31B18DF8D002C874D /* DetailedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
