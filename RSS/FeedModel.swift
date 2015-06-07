@@ -16,15 +16,16 @@ class FeedModel: NSObject, NSXMLParserDelegate {
     // Parser variables
     var currentElement = ""
     var foundCharacters = ""
-    var attributes = [NSObject:AnyObject]?()
+    var attributes:[NSObject:AnyObject]?
     var currentlyConstructingArticle = Article()
     
     // Methods
     
     func getArticles() {
         
-         // Initialize a new parser
-        let feedNSUrl = NSURL(fileURLWithPath: feedUrl)
+         // Initialize a new parser; Note: Intially used the wrong NSURL method!
+        let feedNSUrl = NSURL(string: feedUrl)
+        
         let feedParser = NSXMLParser(contentsOfURL: feedNSUrl!)
         
         if let actualFeedParser = feedParser {
@@ -46,8 +47,15 @@ class FeedModel: NSObject, NSXMLParserDelegate {
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String?) {
-        if currentElement == "entry" || currentElement == "title" || currentElement == "content" || currentElement == "link" {
-            foundCharacters += string!
+        if let chars = string {
+            
+            if self.currentElement == "entry" ||
+                self.currentElement == "title" ||
+                self.currentElement == "content" ||
+                self.currentElement == "link" {
+                    
+                    self.foundCharacters += chars
+            }
         }
     }
     
@@ -68,7 +76,8 @@ class FeedModel: NSObject, NSXMLParserDelegate {
             foundCharacters = ""
         } else if elementName == "link" {
             // Parsing of the link element is complete, grab the href from the attributes dictionary
-            // currentlyConstructingArticle.articleLink = attributes["href"] as! String
+            // Note: Need to unwrap the dictionary object
+            currentlyConstructingArticle.articleLink = attributes!["href"] as! String
             
             // Clear the foundCharacters buffer
             foundCharacters = ""
